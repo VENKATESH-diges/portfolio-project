@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+
+    <div class="navbar" action="">
+        <div class="logo">My Portfolio</div>
+        <div class="nav-right">
+            <span>👤 {{ request.user.username }}</span>
+            <a href="{% url 'logout' %}">
+                <button class="btn btn-danger">Logout</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <h1>Welcome back, {{ request.user.username }} 👋</h1>
+        <p>Manage your reviews and share your thoughts.</p>
+        <br>
+        <a href="{% url 'reviewspage' %}">
+            <button class="btn btn-primary">+ Add Review</button>
+        </a>
+    </div>
+
+
+    <div class="card">
+        <h3>Review Title</h3>
+        <p>This is sample review description.</p>
+        <small>Posted by {{ request.user.username }}</small>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'siging.css' %}">
+    <title>Signup</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="left-panel">
+            <h1>Portfolio App</h1>
+            <p>Build. Grow. Showcase your talent.</p>
+        </div>
+
+        <div class="right-panel">
+            <div class="signup-card">
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="message {{ message.tags }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <h2>Create Account</h2>
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <input type="text" name="Username" placeholder="Username" required>
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="ps1" placeholder="Password" required>
+                    <input type="password" name="ps2" placeholder="Confirm Password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <p class="login-link">
+                    Already have an account? <a href="{% url 'login_enterpage' %}">Login</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

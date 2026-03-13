@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="left-panel">
+            <h1>Portfolio App</h1>
+            <p>Build. Grow. Showcase your talent.</p>
+        </div>
+
+        <div class="right-panel">
+            <div class="auth-card">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Login to continue</p>
+
+                <form method="POST" action="{% url 'login_enterpage' %}">
+                    {% csrf_token %}
+
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p style="color:red; text-align:center; position: relative;bottom:10px;">{{ message }}</p>
+                    {% endfor %}
+                    {% endif %}
+
+                    <input type="text" name="name" placeholder="Enter Username" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="links">
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                    <span>|</span>
+                    <a href="{% url 'sign_in' %}">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

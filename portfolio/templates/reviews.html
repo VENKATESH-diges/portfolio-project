@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'reviewspage.css' %}">
+    <title>Add Review</title>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add Your Review</h2>
+        <div class="username">
+            Logged in as 👤 {{ request.user.username }}
+        </div>
+
+        <form method="POST" action="{% url 'reviewspage' %}">
+            {% csrf_token %}
+
+            <input type="text" name="title" placeholder="Enter review rating" required>
+
+            <textarea name="description" rows="4" placeholder="Write your thoughts..." required></textarea>
+
+            <button type="submit" class="btn submit-btn">Submit Review</button>
+
+            <a href="{% url 'home' %}" class="back-btn">Back to Home</a>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

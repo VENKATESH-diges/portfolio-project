@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'reviewsall.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Reviews</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>All Reviews</h1>
+
+        {% for review in reviews %}
+
+        <div class="review-card">
+
+            <h2>{{ review.user.username }}</h2>
+
+            <h4>{{ review.title }}</h4>
+
+            <p>{{ review.description }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>
