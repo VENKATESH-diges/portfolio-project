@@ -130,3 +130,6 @@ EMAIL_HOST_PASSWORD = 'xqojrugqvjezvxir'
 
 LOGIN_URL = 'login_enterpage'
 LOGIN_REDIRECT_URL = 'home'
+
+ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["portfolio-project-cn7g.onrender.com"]
