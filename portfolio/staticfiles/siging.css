@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.left-panel {
+    flex: 1;
+    background: #1e1e2f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.left-panel p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* RIGHT SIDE */
+.right-panel {
+    flex: 1;
+    background: #f4f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card {
+    background: white;
+    width: 380px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.signup-card h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.signup-card input:focus {
+    border-color: #1e1e2f;
+    outline: none;
+}
+
+.signup-card button {
+    width: 100%;
+    padding: 12px;
+    background: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-card button:hover {
+    background: #333;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #1e1e2f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}

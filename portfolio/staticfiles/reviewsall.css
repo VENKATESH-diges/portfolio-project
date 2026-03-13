@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* center page */
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* title */
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* review card */
+.review-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* username */
+.review-card h2{
+    margin:0;
+    color:#38bdf8;
+}
+
+/* title */
+.review-card h4{
+    margin:5px 0;
+}
+
+/* description */
+.review-card p{
+    margin-top:8px;
+}
