@@ -133,3 +133,8 @@ LOGIN_REDIRECT_URL = 'home'
 
 ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = ["portfolio-project-cn7g.onrender.com"]
+ALLOWED_HOSTS = [
+    "portfolio-project-1-p8iq.onrender.com",
+    "localhost",
+    "127.0.0.1"
+]
